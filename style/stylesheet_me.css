@@ -28,6 +28,7 @@ main {
     font-size: 30px;
     /* position: relative; */
     text-align: left;
+    padding-top: 90px;
 
 }
 
@@ -66,18 +67,26 @@ a:visited {
     border-bottom: 1px solid #fff;
     color: #fff;
     display: flex;
+    width: 100%;
     height: 74px;
+    top: 0;
     justify-content: space-between;
     padding: 0 5%;
     border: 0;
+    position: fixed;
 }
 
 
 .message_top .icon {
     width: 10rem;
     padding-bottom: 1rem;
-    overflow: hidden;
-    position: relative;
+    /* overflow: hidden;
+    position: relative; */
+}
+
+.snsicon {
+    width: 15%;
+    padding-right: 10px;
 }
 
 p {
@@ -103,6 +112,8 @@ p {
 
 .list {
     padding-left: 2rem;
+    display: flex;
+    align-items: center;
 }
 
 .text_sub {
@@ -120,6 +131,7 @@ p {
     margin-bottom: 1rem;
     border-radius: 5px;
     /* font-style: italic; */
+    align-items: center;
 }
 
 .sns a:visited {
