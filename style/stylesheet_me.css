@@ -188,6 +188,10 @@ a:visited {
     }
 }
 
+.sns a{
+    color: #000000;
+}
+
 .sns a:visited {
     color: #000000;
 }
