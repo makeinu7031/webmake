@@ -39,7 +39,7 @@ main {
     main {
         margin: 1rem;
         font-size: 30px;
-        padding-top: 120px;
+        padding-top: 100px;
     }
 }
 
@@ -107,7 +107,7 @@ a:visited {
 @media (max-width: 767px) {
     .header {
         /* 幅を広げる */
-        height: 90px;
+        height: 85px;
     }
 }
 

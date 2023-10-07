@@ -42,7 +42,7 @@ main {
         margin: 1rem;
         font-size: 30px;
         text-align: left;
-        padding-top: 120px;
+        padding-top: 100px;
     }
 }
 
@@ -96,7 +96,7 @@ a:visited {
 @media (max-width: 767px) {
     .header {
         /* 幅を広げる */
-        height: 90px;
+        height: 85px;
     }
 }
 
@@ -171,6 +171,7 @@ a:visited {
 }
 
 .sns li{
+    color: #000000;
     background-color: rgb(255, 255, 255);
     padding: 5px;
     margin-bottom: 1rem;
