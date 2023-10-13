@@ -112,23 +112,6 @@ a:visited {
     }
 }
 
-.image{
-    margin: 10px;
-    padding-top: 30px;
-    text-align: center;
-}
-
-.image img {
-    width: 80%;
-    margin: auto;
-}
-
-@media (max-width:767px) {
-    .image img {
-        width: 100%;
-    }
-}
-
   
 /* ボタンの装飾 */
 /* デフォルトのbuttonスタイルをリセット */
