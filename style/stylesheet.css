@@ -228,6 +228,10 @@ button {
     /* margin-right: 55px; */
 }
 
+.nav-list img {
+    width: 100%;
+}
+
 /* メニューオープン時 */
 .nav-wrapper.fade {
     visibility: visible;
