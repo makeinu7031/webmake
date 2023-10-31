@@ -90,6 +90,10 @@ a:visited {
     margin-bottom: 10px;
 }
 
+.text {
+    margin: 10rem;
+}
+
 .header {
     align-items: center;
     background-color: #4e4e4e;
