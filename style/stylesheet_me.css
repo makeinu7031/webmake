@@ -258,8 +258,7 @@ button {
     top: 10px;
 }
 .bar_mid{    
-    top: 50%;
-    height: 4px; 
+    top: 49%;
     transform: tanslate(-50%,-50%);
 }
 .bar_bottom{
