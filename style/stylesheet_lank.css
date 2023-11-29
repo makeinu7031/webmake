@@ -39,8 +39,20 @@ main {
     /*　画面サイズが767pxから1024pxまではここを読み込む　*/
     main {
         margin: 1rem;
-        font-size: 30px;
+        font-size: 20px;
         padding-top: 100px;
+    }
+}
+
+.text_body {
+    text-align: center;
+    margin-bottom: 1rem;
+}
+
+@media (max-width:767px) {
+    /*　画面サイズが767pxから1024pxまではここを読み込む　*/
+    .text_body {
+        text-align: left;
     }
 }
 
@@ -144,6 +156,51 @@ iframe {
     .youtube {
         width: 50%;
     }
+}
+
+.noodle {
+    text-align: left;
+    margin: auto;
+    background-color: rgb(255, 255, 255);
+}
+
+@media (min-width: 767px) {
+    .noodle {
+        width: 70%;
+    }
+}
+
+.noodle p {
+    font-size: 8vw;
+    color: #ffffff;
+}
+
+.noodle-top {
+    text-align: center;
+    background-color: rgb(0, 0, 0);
+}
+
+.noodle a {
+    color: #000000;
+    background-color: rgb(255, 204, 0);
+    margin-left: 0.2rem;
+}
+
+.noodle-img {
+    text-align: center;
+}
+
+.shop  {
+    margin-top: 0.5rem;
+    margin-bottom: 1rem;
+    background-color: #ffffff; 
+}
+
+.noodle img {
+    width: 95%;
+    padding: 0.2rem;
+    border-radius: 5px;
+    background-color: #000000;
 }
   
 /* ボタンの装飾 */
