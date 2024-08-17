@@ -42,6 +42,10 @@ header {
     padding: 0;
 }
 
+h3,h4 {
+    margin-bottom: 5px;
+}
+
 ul {
     overflow: hidden;
     list-style: none;
@@ -149,7 +153,7 @@ a:visited {
 }
 
 .message {
-    padding-bottom: 10px;
+    padding-bottom: 50px;
 }
 
 .icon {
@@ -243,7 +247,7 @@ p {
 }
 
 .text_sub {
-    padding: 5%;
+    padding: 20px;
 }
 
 .author {
