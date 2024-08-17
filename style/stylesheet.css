@@ -168,12 +168,22 @@ a:visited {
     height: 100%;
 }
 
+.message {
+    width: 100%;
+    text-align: center;
+    margin: auto;
+}
+
 @media (min-width: 767px) {
     .spotify {
         width: 50%;
     }
 
     .youtube {
+        width: 50%;
+    }
+
+    .message {
         width: 50%;
     }
 }
