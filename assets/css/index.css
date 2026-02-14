@@ -1,14 +1,20 @@
+/* レスポンシブ用ベース */
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
 html {
     font-size: 25px;
     font-family: "Open Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", sans-serif;
+    overflow-x: hidden;
+    -webkit-text-size-adjust: 100%;
 }
 
-@media (max-width:767px) {
-
-    /*　画面サイズが767pxから1024pxまではここを読み込む　*/
+@media (max-width: 767px) {
     html {
-        font-size: 20px;
-        font-family: "Open Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", sans-serif;
+        font-size: 18px;
     }
 }
 
@@ -48,25 +54,34 @@ ul {
 }
 
 body {
-    background-image: url(../picture/computer_2_cool-3.png);
+    background-image: url(../images/content/computer_2_cool-3.png);
     background-size: 9rem;
     background-repeat: repeat;
-    font-size: 30rem;
+    font-size: 1rem;
+    overflow-x: hidden;
+    min-height: 100vh;
+}
+
+@media (max-width: 767px) {
+    body {
+        background-size: 5rem;
+    }
 }
 
 main {
-    margin: 1rem;
-    font-size: 30px;
+    margin: 0 1rem 1rem;
+    font-size: 1rem;
     padding-top: 90px;
+    padding-left: env(safe-area-inset-left);
+    padding-right: env(safe-area-inset-right);
+    max-width: 100%;
 }
 
-@media (max-width:767px) {
-
-    /*　画面サイズが767pxから1024pxまではここを読み込む　*/
+@media (max-width: 767px) {
     main {
-        margin: 1rem;
-        font-size: 30px;
-        padding-top: 100px;
+        margin: 0 0.5rem 1rem;
+        padding-top: calc(100px + env(safe-area-inset-top));
+        font-size: 0.95rem;
     }
 }
 
@@ -102,12 +117,15 @@ a:visited {
 
 .title img {
     width: 50%;
+    max-width: 100%;
+    height: auto;
     margin: auto;
+    display: block;
 }
 
-@media (max-width:767px) {
+@media (max-width: 767px) {
     .title img {
-        width: 80%;
+        width: 90%;
     }
 }
 
@@ -136,16 +154,20 @@ a:visited {
     width: 100%;
     height: 70px;
     top: 0;
-    justify-content: space-between;
+    justify-content: flex-end;
     padding: 0 5%;
+    padding-left: env(safe-area-inset-left);
+    padding-right: calc(5% + env(safe-area-inset-right));
     border: 0;
     position: fixed;
+    z-index: 10;
+    overflow: visible;
 }
 
 @media (max-width: 767px) {
     .header {
-        /* 幅を広げる */
         height: 85px;
+        padding-top: env(safe-area-inset-top);
     }
 }
 
@@ -158,9 +180,27 @@ a:visited {
 
 .spotify {
     width: 100%;
+    max-width: 100%;
     margin: auto;
     text-align: center;
     margin-bottom: 1rem;
+}
+
+.spotify iframe {
+    max-width: 100%;
+    height: 352px;
+}
+
+@media (max-width: 767px) {
+    .spotify {
+        margin-bottom: 0.5rem;
+    }
+    .spotify iframe {
+        height: 280px;
+    }
+    .message--about-site {
+        margin-top: 0.25rem;
+    }
 }
 
 .youtube iframe {
@@ -172,6 +212,84 @@ a:visited {
     width: 100%;
     text-align: center;
     margin: auto;
+}
+
+/* このサイトの作られ方セクション */
+.message--about-site .text_sub {
+    text-align: left;
+}
+
+.about-site__title {
+    font-size: 1.25rem;
+    color: #4e4e4e;
+    margin: 0 0 1rem;
+    padding-bottom: 0.5rem;
+    border-bottom: 2px solid #4e4e4e;
+}
+
+.about-site__block {
+    margin-bottom: 1.25rem;
+}
+
+.about-site__block:last-of-type {
+    margin-bottom: 0;
+}
+
+.about-site__heading {
+    font-size: 0.95rem;
+    color: #4e4e4e;
+    margin: 0 0 0.5rem;
+    font-weight: 600;
+}
+
+.about-site__block p {
+    margin: 0 0 0.5rem;
+    font-size: 0.9rem;
+    line-height: 1.6;
+    color: #333;
+}
+
+.tech-list {
+    margin: 0.5rem 0 1rem;
+    padding-left: 1.25rem;
+    list-style: disc;
+}
+
+.tech-list li {
+    margin-bottom: 0.35rem;
+    font-size: 0.9rem;
+    line-height: 1.5;
+    color: #333;
+}
+
+.tech-tag {
+    display: inline-block;
+    background-color: #4e4e4e;
+    color: #fff;
+    font-size: 0.75rem;
+    padding: 0.15em 0.5em;
+    border-radius: 4px;
+    margin-right: 0.25em;
+    font-weight: 600;
+}
+
+.about-site__note {
+    font-size: 0.85rem;
+    color: #555;
+    margin-top: 0.75rem !important;
+}
+
+@media (max-width: 767px) {
+    .about-site__title {
+        font-size: 1.1rem;
+    }
+    .about-site__heading {
+        font-size: 0.9rem;
+    }
+    .tech-tag {
+        font-size: 0.7rem;
+        padding: 0.12em 0.4em;
+    }
 }
 
 @media (min-width: 767px) {
@@ -189,7 +307,6 @@ a:visited {
 }
 
 /* ボタンの装飾 */
-/* デフォルトのbuttonスタイルをリセット */
 button {
     -webkit-appearance: none;
     -moz-appearance: none;
@@ -204,17 +321,34 @@ button {
     outline: none;
     padding: 0;
     vertical-align: middle;
-    position: fixed;
 }
 
-/* 以下、ハンバーガーボタン */
+/* ハンバーガーボタン（タッチしやすいサイズ・バツが切れないよう余白確保） */
 .burger-btn {
-    display: block;
-    width: 1.5rem;
-    height: 39px;
-    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 44px;
+    min-width: 44px;
+    height: 44px;
+    min-height: 44px;
+    position: absolute;
+    right: 0.5rem;
+    top: 50%;
+    transform: translateY(-50%);
     z-index: 3;
     border: none;
+    padding: 0;
+    overflow: visible;
+}
+
+@media (max-width: 767px) {
+    .burger-btn {
+        right: max(1rem, env(safe-area-inset-right));
+    }
+    .header {
+        padding-right: max(4rem, calc(1rem + env(safe-area-inset-right)));
+    }
 }
 
 .bar {
@@ -233,7 +367,7 @@ button {
 
 .bar_mid {
     top: 49%;
-    transform: tanslate(-50%, -50%);
+    transform: translate(-50%, -50%);
 }
 
 .bar_bottom {
@@ -290,13 +424,33 @@ button {
 }
 
 .nav-item {
-    /* margin-top: 50%;           */
     margin-bottom: 40px;
-    /* margin-right: 55px; */
+}
+
+.nav-item a {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 44px;
+    min-height: 44px;
+    padding: 0.25rem;
 }
 
 .nav-list img {
-    width: 100%;
+    width: auto;
+    max-width: 120px;
+    max-height: 80px;
+    height: auto;
+}
+
+@media (max-width: 767px) {
+    .nav-list img {
+        max-width: 100px;
+        max-height: 60px;
+    }
+    .nav-item {
+        margin-bottom: 32px;
+    }
 }
 
 /* メニューオープン時 */

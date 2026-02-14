@@ -3,9 +3,9 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
     <title>My Page</title>
-    <link rel="stylesheet" href="style/stylesheet_me.css">
+    <link rel="stylesheet" href="assets/css/aboutme.css">
 </head>
 
 <body>
@@ -14,86 +14,76 @@
         <div class="nav-wrapper">
             <nav class="header-nav">
                 <ul class="nav-list">
-                    <li class="nav-item"><a href="./index.html"><img src="menu_image/home.png" alt="home"></a></li>
-                    <li class="nav-item"><a href="./aboutme.html"><img src="menu_image/aboutme.png" alt="aboutme"></a>
-                    </li>
-                    <li class="nav-item"><a href="./ranking.html"><img src="menu_image/something.png"
-                                alt="something"></a></li>
+                    <li class="nav-item"><a href="./index.html"><img src="assets/images/icons/home.png" alt="home"></a></li>
+                    <li class="nav-item"><a href="./aboutme.html"><img src="assets/images/icons/aboutme.png" alt="aboutme"></a></li>
+                    <li class="nav-item"><a href="./something.html"><img src="assets/images/icons/something.png" alt="something"></a></li>
                 </ul>
             </nav>
         </div>
-        <!-- ハンバーガーメニュー -->
-        <button class="burger-btn">
+        <button class="burger-btn" aria-label="メニュー">
             <span class="bar bar_top"></span>
             <span class="bar bar_mid"></span>
             <span class="bar bar_bottom"></span>
         </button>
     </header>
 
-
     <main>
         <div class="frame">
-            <div class="message_top">
-                <div class="icon">
-                    <img src="picture/sonic.jpg" alt="icon">
+            <!-- プロフィール画像：差し替え時は src と alt を変更 -->
+            <section class="profile-section">
+                <div class="profile-section__img">
+                    <img src="assets/images/content/sonic.jpg" alt="プロフィール" width="200" height="200">
                 </div>
-                <div class="list">
-                    <ul class="sns">
-                        <li><a href="https://www.instagram.com/ks44n4g4/"><img
-                                    src="picture/Instagram_Glyph_Gradient.png" alt="icon" class="snsicon">instagram</a>
-                        </li>
-                        <li><a
-                                href="https://open.spotify.com/user/%E3%81%8C%E3%82%93%E3%81%90%E3%82%8D%E3%81%8A%E3%81%89%E3%81%89%E3%81%89%21%21%21?si=ee7c40b920a440b8"><img
-                                    src="picture/Spotify_Icon_RGB_Green.png" alt="icon" class="snsicon">spotify</a></li>
-                    </ul>
-                </div>
-            </div>
+            </section>
 
-            <div class="message">
-                <div class="text">
-                    <div class="text_sub">
-                        <h3>著者</h3>
-                        <p>東京都在住</p>
-                        <p>鹿児島県出身</p>
-                        <p>SE見習い</p>
+            <!-- 保有スキル 9 アイコン：画像は assets/images/content/ に置き、各 .skill-icons__item の src と alt を変更 -->
+            <!-- <section class="skill-icons-section">
+                <h3 class="skill-icons-section__title">Skills</h3>
+                <div class="skill-icons">
+                    <div class="skill-icons__item"><img src="assets/images/content/computer_2_cool-3.png" alt="スキル1" loading="lazy"></div>
+                    <div class="skill-icons__item"><img src="assets/images/content/computer_2_cool-3.png" alt="スキル2" loading="lazy"></div>
+                    <div class="skill-icons__item"><img src="assets/images/content/computer_2_cool-3.png" alt="スキル3" loading="lazy"></div>
+                    <div class="skill-icons__item"><img src="assets/images/content/computer_2_cool-3.png" alt="スキル4" loading="lazy"></div>
+                    <div class="skill-icons__item"><img src="assets/images/content/computer_2_cool-3.png" alt="スキル5" loading="lazy"></div>
+                    <div class="skill-icons__item"><img src="assets/images/content/computer_2_cool-3.png" alt="スキル6" loading="lazy"></div>
+                    <div class="skill-icons__item"><img src="assets/images/content/computer_2_cool-3.png" alt="スキル7" loading="lazy"></div>
+                    <div class="skill-icons__item"><img src="assets/images/content/computer_2_cool-3.png" alt="スキル8" loading="lazy"></div>
+                    <div class="skill-icons__item"><img src="assets/images/content/computer_2_cool-3.png" alt="スキル9" loading="lazy"></div>
+                </div>
+            </section> -->
+
+            <!-- 写真グリッド（Instagram風）：画像を追加するときは .photo-grid__item をコピーして src と alt を書き換え -->
+            <section class="photo-grid-section">
+                <!-- <h3 class="photo-grid-section__title">Photo</h3> -->
+                <div class="photo-grid">
+                    <div class="photo-grid__item">
+                        <img src="assets\images\content\photos\snow.JPG" alt="スノボ" loading="lazy">
+                    </div>
+                    <div class="photo-grid__item">
+                        <img src="assets\images\content\photos\cdg.JPG" alt="ギャルソン" loading="lazy">
+                    </div>
+                    <div class="photo-grid__item">
+                        <img src="assets\images\content\photos\lol.png" alt="LoL" loading="lazy">
+                    </div>
+                    <div class="photo-grid__item">
+                        <img src="assets/images/content/photos/clothings.JPG" alt="洋服" loading="lazy">
+                    </div>
+                    <div class="photo-grid__item">
+                        <img src="assets\images\content\photos\sonic.JPG" alt="ソニック" loading="lazy">
+                    </div>
+                    <div class="photo-grid__item">
+                        <img src="assets\images\content\photos\camera.JPG" alt="カメラ" loading="lazy">
+                    </div>
+                    <div class="photo-grid__item">
+                        <img src="assets/images/content/photos/Tux.png" alt="Linux" loading="lazy">
                     </div>
                 </div>
-            </div>
-            <div class="message">
-                <div class="text">
-                    <div class="text_sub">
-                        <h3>経歴</h3>
-                        <p>2022年 大学卒業</p>
-                        <p>2023年 IT企業入社</p>
-                        <p>2024年 基本情報技術者試験合格</p>
-                    </div>
-                </div>
-            </div>
-            <div class="message">
-                <div class="text">
-                    <div class="text_sub">
-                        <h3>保有スキル</h3>
-                        <h4>front-end</h4>
-                        <p>・vue</p>
-                        <p>・html,css</p>
-                        <p>・javascript</p>
-                        <h4>back-end</h4>
-                        <p>・Python</p>
-                        <p>・MySQL</p>
-                        <p>・Java</p>
-                        <h4>dev-ops</h4>
-                        <p>・git</p>
-                        <p>・docker</p>
-                        <p>・GCP</p>
-                        <p>・Linux</p>
-                    </div>
-                </div>
-            </div>
+            </section>
         </div>
 
         <script src="https://code.jquery.com/jquery-3.6.0.min.js"
             integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
-        <script src="menu.js"></script>
+        <script src="assets/js/menu.js"></script>
     </main>
 
 </body>
