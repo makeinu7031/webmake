@@ -3,9 +3,9 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
     <title>My Page</title>
-    <link rel="stylesheet" href="style/stylesheet.css">
+    <link rel="stylesheet" href="assets/css/index.css">
 </head>
 
 <body>
@@ -13,9 +13,9 @@
         <div class="nav-wrapper">
             <nav class="header-nav">
                 <ul class="nav-list">
-                    <li class="nav-item"><a href="./index.html"><img src="menu_image/home.png" alt="home"></a></li>
-                    <li class="nav-item"><a href="./aboutme.html"><img src="menu_image/aboutme.png" alt="aboutme"></a></li>
-                    <li class="nav-item"><a href="./ranking.html"><img src="menu_image/something.png" alt="something"></a></li>
+                    <li class="nav-item"><a href="./index.html"><img src="assets/images/icons/home.png" alt="home"></a></li>
+                    <li class="nav-item"><a href="./aboutme.html"><img src="assets/images/icons/aboutme.png" alt="aboutme"></a></li>
+                    <li class="nav-item"><a href="./something.html"><img src="assets/images/icons/something.png" alt="something"></a></li>
                 </ul>
             </nav>
         </div>
@@ -29,7 +29,7 @@
 
     <main>
         <div class="title">
-            <img src="picture/title.png" alt="title" class="title">
+            <img src="assets/images/content/title.png" alt="title" class="title">
         </div>
 
         <div class="spotify">
@@ -42,13 +42,29 @@
             ></iframe>
         </div>
 
-        <div class="message">
+        <section class="message message--about-site">
             <div class="text">
-                <div class="text_sub">
-                    <p>このサイトはwebサイト作成の練習および自己紹介用として作られています</p>
+                <div class="text_sub text_sub--about">
+                    <h2 class="about-site__title">このサイトについて</h2>
+                    <div class="about-site__block">
+                        <h3 class="about-site__heading">作られた目的</h3>
+                        <p>Webサイト制作の練習と、自己紹介・作品の紹介を目的として作成しました。</p>
+                    </div>
+                    <div class="about-site__block">
+                        <h3 class="about-site__heading">使用している構成・ツール</h3>
+                        <p>静的サイトとして、次の技術で構成しています。</p>
+                        <ul class="tech-list">
+                            <li><span class="tech-tag">HTML</span> … 構造</li>
+                            <li><span class="tech-tag">CSS</span> … デザイン・レスポンシブ対応</li>
+                            <li><span class="tech-tag">JavaScript</span> … ハンバーガーメニューなどの挙動</li>
+                            <li><span class="tech-tag">Cursor</span> … コード編集・開発補助</li>
+                            <li><span class="tech-tag">GitHub Pages</span> … 公開・ホスティング</li>
+                        </ul>
+                        <p class="about-site__note">エディタには Cursor を用い、コーディングや構成の整理を行っています。このサイトは GitHub Pages で公開しています。</p>
+                    </div>
                 </div>
             </div>
-        </div>
+        </section>
 
     </main>
 
@@ -57,7 +73,7 @@
         integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
         crossorigin="anonymous"
     ></script>
-    <script src="menu.js"></script>
+    <script src="assets/js/menu.js"></script>
 
 </body>
 
