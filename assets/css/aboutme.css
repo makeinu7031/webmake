@@ -110,6 +110,7 @@ body::before {
 a {
     text-decoration: none;
     color: #ffffff;
+    transition: color 0.2s ease;
 }
 
 a:hover {
@@ -171,6 +172,11 @@ a:visited {
     overflow: hidden;
     border-radius: 50%;
     background-color: #eee;
+    transition: transform 0.3s ease;
+}
+
+.profile-section__img:hover {
+    transform: scale(1.03);
 }
 
 .profile-section__img img {
@@ -218,6 +224,11 @@ a:visited {
     display: flex;
     align-items: center;
     justify-content: center;
+    transition: transform 0.2s;
+}
+
+.skill-icons__item:hover {
+    transform: scale(1.05);
 }
 
 .skill-icons__item img {
@@ -271,6 +282,11 @@ a:visited {
     height: 100%;
     object-fit: cover;
     display: block;
+    transition: transform 0.4s ease;
+}
+
+.photo-grid__item:hover img {
+    transform: scale(1.06);
 }
 
 @media (max-width: 767px) {
@@ -313,6 +329,11 @@ button {
     z-index: 3;
     border: none;
     overflow: visible;
+    transition: transform 0.2s;
+}
+
+.burger-btn:hover {
+    transform: translateY(-50%) scale(1.05);
 }
 
 @media (max-width: 767px) {
@@ -332,6 +353,7 @@ button {
     left: 50%;
     transform: translateX(-50%);
     background-color: #fff;
+    transition: transform 0.3s ease, opacity 0.3s ease;
 }
 
 .bar_top {
@@ -350,20 +372,15 @@ button {
 /* 閉じたときのボタンデザイン */
 .burger-btn.close .bar_top {
     transform: translate(-50%, 10px) rotate(45deg);
-    transition: transform .3s;
 }
 
 .burger-btn.close .bar_mid {
     opacity: 0;
-    transition: opacity .3s;
 }
 
 .burger-btn.close .bar_bottom {
     transform: translate(-50%, -8px) rotate(-45deg);
-    transition: transform .3s;
 }
-
-
 
 /* メニュー選択時 */
 .nav-wrapper {
@@ -374,7 +391,7 @@ button {
     position: fixed;
     top: 0;
     left: 0;
-    transition: opacity .5s;
+    transition: opacity .4s ease, visibility .4s;
     z-index: 2;
 }
 
@@ -398,6 +415,11 @@ button {
 
 .nav-item {
     margin-bottom: 40px;
+    transition: transform 0.2s ease;
+}
+
+.nav-item:hover {
+    transform: scale(1.05);
 }
 
 .nav-item a {
@@ -414,6 +436,11 @@ button {
     max-width: 120px;
     max-height: 80px;
     height: auto;
+    transition: transform 0.2s;
+}
+
+.nav-item:hover img {
+    transform: scale(1.05);
 }
 
 @media (max-width: 767px) {
@@ -434,4 +461,11 @@ button {
 
 .menu {
     text-align: center;
+}
+
+footer {
+    text-align: center;
+    padding: 1.5rem 1rem;
+    color: #555;
+    font-size: 0.8rem;
 }
