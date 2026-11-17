@@ -196,34 +196,35 @@ a:visited {
     }
 }
 
-/* Instagram セクション */
+/* Instagram セクション（より見やすく強調） */
 .instagram-section {
-    margin-bottom: 1.5rem;
+    margin: 1.5rem 0 2rem;
     text-align: center;
 }
 
 .instagram-section .text {
     background-color: rgb(255, 255, 255);
-    border-radius: 10px;
+    border-radius: 12px;
     display: inline-block;
     max-width: 100%;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.06);
 }
 
 .instagram-section .text_sub {
-    padding: 1.2rem 1.5rem;
+    padding: 1.5rem 2rem;
 }
 
 .instagram-section__title {
-    font-size: 1rem;
+    font-size: 1.2rem;
     color: #4e4e4e;
-    margin: 0 0 0.75rem;
-    font-weight: 600;
+    margin: 0 0 1rem;
+    font-weight: 700;
 }
 
 .instagram-links {
     display: flex;
     flex-direction: column;
-    gap: 0.5rem;
+    gap: 0.75rem;
     align-items: center;
 }
 
@@ -231,9 +232,11 @@ a:visited {
     display: inline-block;
     background-color: #4e4e4e;
     color: #fff !important;
-    padding: 0.5rem 1.2rem;
-    border-radius: 6px;
-    font-size: 0.9rem;
+    padding: 0.7rem 1.6rem;
+    border-radius: 8px;
+    font-size: 1.05rem;
+    font-weight: 600;
+    letter-spacing: 0.3px;
     transition: background-color 0.2s, transform 0.2s;
 }
 
@@ -241,108 +244,6 @@ a:visited {
     background-color: #3a3a3a;
     color: #fff !important;
     transform: translateY(-2px);
-}
-
-/* 保有スキル 9 アイコン：画像差し替え時は aboutme.html の各 .skill-icons__item の src/alt を変更 */
-.skill-icons-section {
-    margin-bottom: 1.5rem;
-}
-
-.skill-icons-section__title {
-    font-size: 1rem;
-    color: #4e4e4e;
-    margin: 0 0 0.75rem;
-    font-weight: 600;
-}
-
-.skill-icons {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 0.75rem;
-    max-width: 18rem;
-    margin: 0 auto;
-}
-
-.skill-icons__item {
-    aspect-ratio: 1;
-    overflow: hidden;
-    border-radius: 8px;
-    background-color: #f0f0f0;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    transition: transform 0.2s;
-}
-
-.skill-icons__item:hover {
-    transform: scale(1.05);
-}
-
-.skill-icons__item img {
-    width: 100%;
-    height: 100%;
-    object-fit: contain;
-    padding: 0.5rem;
-    display: block;
-}
-
-@media (max-width: 767px) {
-    .skill-icons-section {
-        margin-bottom: 1rem;
-    }
-    .skill-icons {
-        gap: 0.5rem;
-        max-width: 14rem;
-    }
-    .skill-icons__item img {
-        padding: 0.35rem;
-    }
-}
-
-/* 写真グリッド（Instagram風）：画像追加時は aboutme.html の .photo-grid__item をコピーして src/alt を変更 */
-.photo-grid-section {
-    margin: 1.5rem 0;
-}
-
-.photo-grid-section__title {
-    font-size: 1rem;
-    color: #4e4e4e;
-    margin: 0 0 0.75rem;
-    font-weight: 600;
-}
-
-.photo-grid {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 4px;
-    width: 100%;
-}
-
-.photo-grid__item {
-    aspect-ratio: 1;
-    overflow: hidden;
-    background-color: #eee;
-}
-
-.photo-grid__item img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    display: block;
-    transition: transform 0.4s ease;
-}
-
-.photo-grid__item:hover img {
-    transform: scale(1.06);
-}
-
-@media (max-width: 767px) {
-    .photo-grid-section {
-        margin: 1rem 0;
-    }
-    .photo-grid {
-        gap: 3px;
-    }
 }
 
 button {
@@ -361,64 +262,46 @@ button {
     vertical-align: middle;
 }
 
+/* ハンバーガーボタン（見切れ対策） */
 .burger-btn {
     display: flex;
+    flex-direction: column;
     align-items: center;
     justify-content: center;
-    width: 44px;
-    min-width: 44px;
-    height: 44px;
-    min-height: 44px;
+    gap: 6px;
+    width: 48px;
+    height: 48px;
     position: absolute;
-    right: 0.5rem;
+    right: 0.75rem;
     top: 50%;
     transform: translateY(-50%);
-    z-index: 3;
+    z-index: 20;
     border: none;
+    background: transparent;
+    padding: 8px;
     overflow: visible;
-    transition: transform 0.2s;
-}
-
-.burger-btn:hover {
-    transform: translateY(-50%) scale(1.05);
 }
 
 @media (max-width: 767px) {
     .burger-btn {
-        right: max(1rem, env(safe-area-inset-right));
+        right: max(0.75rem, env(safe-area-inset-right));
     }
     .header {
-        padding-right: max(4rem, calc(1rem + env(safe-area-inset-right)));
+        padding-right: max(4.5rem, calc(1rem + env(safe-area-inset-right)));
     }
 }
 
 .bar {
-    width: 30px;
+    width: 26px;
     height: 3px;
-    display: block;
-    position: absolute;
-    left: 50%;
-    transform: translateX(-50%);
     background-color: #fff;
+    border-radius: 2px;
     transition: transform 0.3s ease, opacity 0.3s ease;
+    display: block;
 }
 
-.bar_top {
-    top: 10px;
-}
-
-.bar_mid {
-    top: 49%;
-    transform: translate(-50%, -50%);
-}
-
-.bar_bottom {
-    bottom: 8px;
-}
-
-/* 閉じたときのボタンデザイン */
 .burger-btn.close .bar_top {
-    transform: translate(-50%, 10px) rotate(45deg);
+    transform: translateY(9px) rotate(45deg);
 }
 
 .burger-btn.close .bar_mid {
@@ -426,7 +309,7 @@ button {
 }
 
 .burger-btn.close .bar_bottom {
-    transform: translate(-50%, -8px) rotate(-45deg);
+    transform: translateY(-9px) rotate(-45deg);
 }
 
 /* メニュー選択時 */
@@ -439,7 +322,7 @@ button {
     top: 0;
     left: 0;
     transition: opacity .4s ease, visibility .4s;
-    z-index: 2;
+    z-index: 15;
 }
 
 .header-nav {
