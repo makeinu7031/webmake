@@ -196,6 +196,53 @@ a:visited {
     }
 }
 
+/* Instagram セクション */
+.instagram-section {
+    margin-bottom: 1.5rem;
+    text-align: center;
+}
+
+.instagram-section .text {
+    background-color: rgb(255, 255, 255);
+    border-radius: 10px;
+    display: inline-block;
+    max-width: 100%;
+}
+
+.instagram-section .text_sub {
+    padding: 1.2rem 1.5rem;
+}
+
+.instagram-section__title {
+    font-size: 1rem;
+    color: #4e4e4e;
+    margin: 0 0 0.75rem;
+    font-weight: 600;
+}
+
+.instagram-links {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    align-items: center;
+}
+
+.ig-link {
+    display: inline-block;
+    background-color: #4e4e4e;
+    color: #fff !important;
+    padding: 0.5rem 1.2rem;
+    border-radius: 6px;
+    font-size: 0.9rem;
+    transition: background-color 0.2s, transform 0.2s;
+}
+
+.ig-link:hover {
+    background-color: #3a3a3a;
+    color: #fff !important;
+    transform: translateY(-2px);
+}
+
 /* 保有スキル 9 アイコン：画像差し替え時は aboutme.html の各 .skill-icons__item の src/alt を変更 */
 .skill-icons-section {
     margin-bottom: 1.5rem;
